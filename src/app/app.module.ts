@@ -7,6 +7,10 @@ import { DefaultModule } from './layouts/default/default.module';
 import { FullpageModule } from './layouts/fullpage/fullpage.module';
 import { FullpageadminModule } from './layouts/fullpageadmin/fullpageadmin.module';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { provideHttpClient } from '@angular/common/http';
+
+
+
 
 
 @NgModule({
@@ -19,9 +23,11 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     DefaultModule,
     FullpageModule,
     FullpageadminModule
+    
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideHttpClient()
   ],
   bootstrap: [AppComponent]
 })
